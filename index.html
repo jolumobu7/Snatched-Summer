@@ -504,6 +504,110 @@ body{background:var(--bg);color:var(--deep);font-family:'Outfit',sans-serif;min-
   </div>
 </div>
 
+<!-- =================== FOOTER =================== -->
+<footer id="site-footer">
+  <div class="footer-inner">
+
+    <!-- MESSAGE BOARD -->
+    <div class="footer-section">
+      <div class="footer-sec-label">Send a Message</div>
+      <h3 class="footer-sec-title">Questions, Requests & Feedback</h3>
+      <p class="footer-sec-sub">Have a workout request, want a custom plan, or just want to say what's working? Drop a message below.</p>
+      <div class="msg-board">
+        <div class="msg-row">
+          <div class="inp-group"><label>Your Name</label><input type="text" id="msg-name" placeholder="e.g. Sarah"></div>
+          <div class="inp-group"><label>Subject</label><input type="text" id="msg-subject" placeholder="e.g. Workout request"></div>
+        </div>
+        <div class="inp-group" style="margin-top:12px;"><label>Your Message</label><textarea id="msg-body" rows="4" placeholder="Type your message, question, or request here..."></textarea></div>
+        <button class="msg-send-btn" onclick="sendMessage()">✉️ Send Message</button>
+        <div id="msg-confirm" class="msg-confirm" style="display:none;">✅ Opening your email app — just hit send!</div>
+      </div>
+    </div>
+
+    <!-- SOURCES -->
+    <div class="footer-section">
+      <div class="footer-sec-label">Sources & Research</div>
+      <h3 class="footer-sec-title">What This Program Is Based On</h3>
+      <div class="sources-grid">
+        <a class="source-card" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6950543/" target="_blank" rel="noopener">
+          <div class="source-icon">🧬</div>
+          <div><h5>Glute Hypertrophy Research</h5><p>NIH — Resistance training and muscle hypertrophy mechanisms</p></div>
+        </a>
+        <a class="source-card" href="https://journals.lww.com/nsca-jscr/fulltext/2020/07000/progressive_overload_without_progressing_load_.1.aspx" target="_blank" rel="noopener">
+          <div class="source-icon">📈</div>
+          <div><h5>Progressive Overload Principles</h5><p>NSCA Journal — Progressive overload for strength & hypertrophy</p></div>
+        </a>
+        <a class="source-card" href="https://pubmed.ncbi.nlm.nih.gov/28919842/" target="_blank" rel="noopener">
+          <div class="source-icon">🔥</div>
+          <div><h5>Caloric Deficit & Fat Loss</h5><p>PubMed — Energy deficit, body composition and fat loss</p></div>
+        </a>
+        <a class="source-card" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5568273/" target="_blank" rel="noopener">
+          <div class="source-icon">🥩</div>
+          <div><h5>Protein & Muscle Retention</h5><p>NIH — Dietary protein intake and muscle mass preservation</p></div>
+        </a>
+        <a class="source-card" href="https://pubmed.ncbi.nlm.nih.gov/19056590/" target="_blank" rel="noopener">
+          <div class="source-icon">💧</div>
+          <div><h5>Hydration & Performance</h5><p>PubMed — Effects of dehydration on exercise performance</p></div>
+        </a>
+        <a class="source-card" href="https://www.acefitness.org/resources/everyone/exercise-library/" target="_blank" rel="noopener">
+          <div class="source-icon">🏋️</div>
+          <div><h5>Exercise Form & Technique</h5><p>ACE Fitness — Exercise library and movement standards</p></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- CREDITS -->
+    <div class="footer-credit">
+      <div class="credit-line">
+        Designed & built by
+        <a href="https://www.linkedin.com/in/jesufifunmi-olugbenga/" target="_blank" rel="noopener" class="credit-link">Jesufifunmi Olugbenga</a>
+      </div>
+      <div class="credit-sub">© 2025 Snatched Summer · All content is for informational purposes only · Consult a physician before starting any new exercise program</div>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+#site-footer{background:var(--deep);color:#fff;padding:60px 0 0;margin-top:0;}
+.footer-inner{max-width:780px;margin:0 auto;padding:0 24px 40px;}
+.footer-section{margin-bottom:48px;}
+.footer-sec-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--blush);margin-bottom:5px;font-weight:500;}
+.footer-sec-title{font-family:'Cormorant Garamond',serif;font-size:26px;color:#fff;margin-bottom:8px;}
+.footer-sec-sub{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:20px;}
+
+/* MESSAGE BOARD */
+.msg-board{background:rgba(255,255,255,.05);border-radius:16px;padding:22px;}
+.msg-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.msg-board .inp-group label{color:rgba(255,255,255,.5);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:5px;}
+.msg-board .inp-group input,.msg-board .inp-group textarea{width:100%;border:1.5px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 14px;font-size:14px;font-family:'Outfit',sans-serif;background:rgba(255,255,255,.07);color:#fff;outline:none;transition:border-color .2s;resize:vertical;}
+.msg-board .inp-group input::placeholder,.msg-board .inp-group textarea::placeholder{color:rgba(255,255,255,.25);}
+.msg-board .inp-group input:focus,.msg-board .inp-group textarea:focus{border-color:var(--blush);}
+.msg-send-btn{margin-top:14px;width:100%;background:var(--rose);color:#fff;border:none;border-radius:10px;padding:12px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;}
+.msg-send-btn:hover{background:#a8445a;}
+.msg-confirm{margin-top:10px;font-size:13px;color:#7dcfaa;padding:10px 14px;background:rgba(125,207,170,.1);border-radius:8px;text-align:center;}
+
+/* SOURCES */
+.sources-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.source-card{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.05);border-radius:12px;padding:16px;text-decoration:none;border:1.5px solid transparent;transition:all .2s;}
+.source-card:hover{border-color:var(--blush);background:rgba(255,255,255,.09);}
+.source-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.source-card h5{font-size:13px;font-weight:500;color:#fff;margin-bottom:3px;}
+.source-card p{font-size:11px;color:rgba(255,255,255,.45);line-height:1.5;}
+
+/* CREDITS */
+.footer-credit{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;text-align:center;}
+.credit-line{font-size:14px;color:rgba(255,255,255,.6);margin-bottom:8px;}
+.credit-link{color:var(--blush);text-decoration:none;font-weight:500;border-bottom:1px solid rgba(240,179,195,.3);transition:color .2s;}
+.credit-link:hover{color:#fff;border-bottom-color:#fff;}
+.credit-sub{font-size:11px;color:rgba(255,255,255,.25);line-height:1.7;}
+
+@media(max-width:580px){
+  .msg-row{grid-template-columns:1fr;}
+  .sources-grid{grid-template-columns:1fr;}
+}
+</style>
+
 <script>
 // ============================================================
 // CONSTANTS
@@ -1049,6 +1153,18 @@ function init(){
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+function sendMessage(){
+  const name = document.getElementById('msg-name').value.trim();
+  const subject = document.getElementById('msg-subject').value.trim() || 'Snatched Summer Message';
+  const body = document.getElementById('msg-body').value.trim();
+  if(!body){ alert('Please write a message before sending!'); return; }
+  const fullSubject = encodeURIComponent('[Snatched Summer] ' + subject);
+  const fullBody = encodeURIComponent((name?'From: '+name+'\n\n':'') + body);
+  window.location.href = `mailto:jolumobu7@gmail.com?subject=${fullSubject}&body=${fullBody}`;
+  document.getElementById('msg-confirm').style.display='block';
+  setTimeout(()=>{ document.getElementById('msg-confirm').style.display='none'; },5000);
+}
 </script>
 </body>
 </html>
