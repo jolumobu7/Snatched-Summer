@@ -13,6 +13,30 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--bg);color:var(--deep);font-family:'Outfit',sans-serif;min-height:100vh;}
 
+/* RUNBUD BANNER */
+.runbud-banner{display:flex;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(135deg,#0a0a0a,#1a1a2e);padding:20px 32px;text-decoration:none;border-bottom:3px solid var(--rose);transition:opacity .2s;flex-wrap:wrap;}
+.runbud-banner:hover{opacity:.92;}
+.rb-tag{display:inline-block;background:var(--rose);color:#fff;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:6px;}
+.rb-title{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;font-weight:700;line-height:1.1;}
+.rb-sub{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;}
+.rb-right{text-align:right;flex-shrink:0;}
+.rb-cta{font-size:15px;font-weight:600;color:var(--blush);}
+.rb-cta span{font-size:18px;}
+.rb-store{font-size:10px;color:rgba(255,255,255,.3);margin-top:3px;letter-spacing:1px;}
+
+/* GEAR / AFFILIATE */
+.gear-section{margin:36px 0 0;}
+.gear-note{font-size:12px;color:var(--text2);margin-bottom:18px;line-height:1.6;}
+.gear-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+.gear-card{display:flex;align-items:flex-start;gap:14px;background:var(--card);border-radius:14px;padding:18px;text-decoration:none;border:1.5px solid transparent;transition:all .2s;}
+.gear-card:hover{border-color:var(--rose);transform:translateY(-2px);box-shadow:0 6px 20px rgba(200,90,114,.1);}
+.gear-emoji{font-size:28px;flex-shrink:0;margin-top:2px;}
+.gear-info h4{font-size:13px;font-weight:600;color:var(--deep);margin-bottom:4px;}
+.gear-info p{font-size:11.5px;color:var(--text2);line-height:1.5;margin-bottom:8px;}
+.gear-cta{font-size:11px;font-weight:600;color:var(--rose);}
+.affiliate-disclaimer{font-size:10.5px;color:#bbb;line-height:1.6;font-style:italic;}
+@media(max-width:580px){.gear-grid{grid-template-columns:1fr;}.runbud-banner{padding:16px 20px;}.rb-right{text-align:left;}}
+
 /* NAV */
 .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;background:var(--deep);position:sticky;top:0;z-index:200;}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:21px;color:#fff;letter-spacing:1px;}
@@ -298,6 +322,19 @@ body{background:var(--bg);color:var(--deep);font-family:'Outfit',sans-serif;min-
     </div>
   </div>
 
+  <!-- RUNBUD BANNER -->
+  <a href="https://apps.apple.com/us/app/runbudapp/id6748336230" target="_blank" rel="noopener" class="runbud-banner">
+    <div class="rb-left">
+      <div class="rb-tag">iOS App</div>
+      <div class="rb-title">Train Like an Athlete</div>
+      <div class="rb-sub">RunBudApp — built for student athletes chasing NCAA opportunities</div>
+    </div>
+    <div class="rb-right">
+      <div class="rb-cta">Download Free <span>↗</span></div>
+      <div class="rb-store">App Store · iOS Only</div>
+    </div>
+  </a>
+
   <!-- STATS INPUT -->
   <div class="stats-box">
     <div class="stats-card">
@@ -429,6 +466,48 @@ body{background:var(--bg);color:var(--deep);font-family:'Outfit',sans-serif;min-
           <div class="run-week"><div class="rw-num">W8</div><div class="rw-info"><h4>3 Mile Run 🎉</h4><p>Three miles continuously. A real milestone.</p></div><div class="rw-badge gold">3 mi run</div></div>
         </div>
       </div>
+    </div>
+
+    <!-- GEAR / AFFILIATE SECTION -->
+    <div class="gear-section">
+      <div class="sec-label">Recommended Gear</div>
+      <div class="sec-title">Everything You Need to Start</div>
+      <p class="gear-note">These are the only things you actually need for this program. Links below are Amazon affiliate links — same price for you, small commission that helps keep this site free.</p>
+      <div class="gear-grid">
+        <a class="gear-card" href="https://www.amazon.com/s?k=mini+resistance+bands+set" target="_blank" rel="noopener">
+          <div class="gear-emoji">🔴</div>
+          <div class="gear-info">
+            <h4>Mini Resistance Bands</h4>
+            <p>Essential for lateral band walks and glute activation. Get a set of 3 with varying resistance.</p>
+            <div class="gear-cta">Shop on Amazon →</div>
+          </div>
+        </a>
+        <a class="gear-card" href="https://www.amazon.com/s?k=ankle+weights+women" target="_blank" rel="noopener">
+          <div class="gear-emoji">🦵</div>
+          <div class="gear-info">
+            <h4>Ankle Weights</h4>
+            <p>Adds resistance to donkey kickbacks. Start with 2–5 lbs per ankle.</p>
+            <div class="gear-cta">Shop on Amazon →</div>
+          </div>
+        </a>
+        <a class="gear-card" href="https://www.amazon.com/s?k=adjustable+dumbbells+women" target="_blank" rel="noopener">
+          <div class="gear-emoji">🏋️</div>
+          <div class="gear-info">
+            <h4>Adjustable Dumbbells</h4>
+            <p>For RDLs, oblique crunches, sumo squats. Adjustable saves money and space.</p>
+            <div class="gear-cta">Shop on Amazon →</div>
+          </div>
+        </a>
+        <a class="gear-card" href="https://www.amazon.com/s?k=thick+exercise+yoga+mat" target="_blank" rel="noopener">
+          <div class="gear-emoji">🟦</div>
+          <div class="gear-info">
+            <h4>Exercise Mat</h4>
+            <p>For floor work — glute bridges, dead bugs, hollow body holds. Get at least 6mm thick.</p>
+            <div class="gear-cta">Shop on Amazon →</div>
+          </div>
+        </a>
+      </div>
+      <p class="affiliate-disclaimer">* As an Amazon Associate this site may earn from qualifying purchases at no extra cost to you. Replace these links with your personal affiliate links once your Amazon Associates account is approved.</p>
     </div>
 
     <div class="diet-warning">
