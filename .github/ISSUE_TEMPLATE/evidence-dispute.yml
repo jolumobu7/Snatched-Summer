@@ -1,0 +1,42 @@
+name: Evidence dispute
+description: Question a claim in Snatched by Summer and point us to better research.
+title: "[Evidence] "
+labels: ["evidence-dispute", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for checking our work. Every dispute is read, answered and logged here.
+        **Please don't share personal health details.** This page is public.
+  - type: input
+    id: claim
+    attributes:
+      label: Claim ID
+      description: Shown on the claim in the app or at /evidence.html (for example `rest-periods`).
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong, missing or outdated?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source(s) you'd suggest
+      description: DOI or PubMed link preferred. Systematic reviews and trials that include women are especially helpful.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: What kind of issue is it?
+      options:
+        - A cited source doesn't say what the claim says
+        - A cited source was retracted or corrected
+        - There's newer or stronger research
+        - The research didn't include women and better data exists
+        - Something else
+    validations:
+      required: true
